@@ -1,6 +1,17 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  for (i = 0; i < word.length; i++) {
+    const j = word.length - 1 - i;
+    const startingChar = word[i];
+    const endingChar = word[j];
+
+    if (startingChar !== endingChar) return false;
+    console.log(startingChar);
+    console.log(endingChar);
+    return true;
+  }
 }
+let response = isPalindrome("racecar");
+console.log(`The word ${response ? "is" : "is not"} a palindrome`);
 
 /* 
   Add your pseudocode here
